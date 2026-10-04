@@ -75,8 +75,8 @@ header{position:sticky;top:0;z-index:30;background:var(--white);border-bottom:1p
 
 /* Intro + historia */
 .intro{padding:104px 0 64px}
-.story{position:relative;padding:0 0 112px}
-.story::before{content:"";position:absolute;left:0;right:0;top:110px;height:calc(100% - 270px);background:var(--aqua)}
+.story{position:relative;padding:0 0 136px}
+.story::before{content:"";position:absolute;left:0;right:0;top:110px;bottom:40px;background:var(--aqua)}
 .story-grid{position:relative;display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:start}
 .story-photo{position:relative;padding:0 0 32px 0}
 .story-photo::after{content:"";position:absolute;left:32px;right:-32px;bottom:0;top:72px;background:var(--black);z-index:0}
@@ -200,7 +200,7 @@ body.open .drawer{transform:none}
   .hero-copy{grid-row:2;padding:0 32px 48px}
   .hero-copy{padding-top:36px}
   .hero h1 span{padding-left:.4em}
-  .story::before{top:200px;height:auto;bottom:112px}
+  .story::before{top:200px;bottom:48px}
   .story-grid{grid-template-columns:1fr;gap:40px}
   .story-photo{max-width:480px}
   .story-txt .lead{margin-bottom:40px;color:var(--ink)}
@@ -225,7 +225,7 @@ body.open .drawer{transform:none}
   .hero-ctas .btn{flex:1 1 100%}
   .intro{padding:72px 0 48px}
   .story{padding-bottom:72px}
-  .story::before{bottom:72px}
+  .story::before{bottom:32px}
   .story-photo::after{left:20px;right:-12px}
   .story-photo .cap{right:-4px}
   .story-txt .quote{font-size:21px}

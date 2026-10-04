@@ -17,4 +17,5 @@ Esto permite que la web vea solo el nombre y la foto de cada producto. El precio
 
 ## Cambiar datos
 - WhatsApp: en `index.html`, busca `const WHATSAPP = '573107460713'`.
+- Instagram: busca `aryamedellin` en `index.html`.
 - Fotos: `img/melissa.jpg` y `img/logo-arya.png`.

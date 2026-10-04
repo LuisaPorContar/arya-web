@@ -3,334 +3,315 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arya Personal Shopper · De USA a Colombia, originales</title>
-<meta name="description" content="Arya es la personal shopper de Melissa Lopera: compras originales en Estados Unidos con entrega en Colombia. Cada día una tienda nueva, un descuento único y las mejores marcas a los mejores precios.">
-<meta name="theme-color" content="#FAF8F4">
+<title>Arya Personal Shopper · Originales de USA a Colombia</title>
+<meta name="description" content="Arya, la personal shopper de Melissa Lopera: productos originales de Estados Unidos con entrega en Colombia. Cada día una tienda nueva, un descuento único y las mejores marcas a los mejores precios.">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:title" content="Arya Personal Shopper">
-<meta property="og:description" content="Productos originales de USA a Colombia. Pide tu cotización por WhatsApp.">
+<meta property="og:description" content="Originales de USA a Colombia. Pide tu cotización por WhatsApp.">
 <meta property="og:image" content="img/logo-arya.png">
 <link rel="icon" href="img/icon-192.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Archivo:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --paper:#FAF8F4; --surface:#FFFFFF; --ink:#111111; --muted:#5E605F; --line:#E7E3DC;
-  --teal:#2EC4B0; --teal-deep:#0E7F72; --teal-soft:#DDF5F0; --night:#0F1D1B;
-  --f-display:"Bodoni Moda",Didot,"Times New Roman",serif;
-  --f-body:"Jost","Segoe UI",system-ui,sans-serif;
-  --wrap:1180px; --radius:4px;
+  --white:#FFFFFF; --black:#111111; --ink:#1B1B1B; --gray:#5F6362; --line:#E6E6E6; --soft:#F5F5F3;
+  --aqua:#8FE3D6; --aqua-soft:#CFF3ED;
+  --serif:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto;display:block}
-.hero-grid>*,.story-grid>*,.encargo-box>*,.cat-head>*{min-width:0}
 html,body{overflow-x:hidden}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-button{font:inherit;cursor:pointer}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--teal-deep);margin:0 0 18px}
-h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.01em}
-h2{font-size:clamp(34px,5vw,56px)}
-em{font-style:italic;color:var(--teal-deep)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:#fff;padding:15px 28px;border-radius:999px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:transform .2s,background .2s,color .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-.btn.teal{background:var(--teal);border-color:var(--teal);color:var(--night)}
-.btn svg{width:18px;height:18px;flex:none}
-:focus-visible{outline:2px solid var(--teal-deep);outline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--black);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* Tipografía */
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;margin:0;color:var(--black)}
+.title{font-size:clamp(32px,4vw,48px);text-align:center;max-width:16em;margin:0 auto}
+.kicker{display:flex;align-items:center;justify-content:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin:0 0 18px}
+.kicker::after{content:"";width:56px;height:1px;background:var(--black)}
+.kicker.left{justify-content:flex-start}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--black);color:var(--white);border:1px solid var(--black);padding:15px 28px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .15s,color .15s}
+.btn:hover{background:transparent;color:var(--black)}
+.btn.light{background:transparent;color:var(--white);border-color:var(--white)}
+.btn.light:hover{background:var(--white);color:var(--black)}
+.link{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px}
+
+/* Barra superior */
+.promo{background:var(--black);color:var(--white);text-align:center;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:10px 16px}
+.promo span+span::before{content:"·";margin:0 14px;color:var(--aqua)}
 
 /* Header */
-header{position:sticky;top:0;z-index:30;background:rgba(250,248,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
-.logo img{height:52px;width:auto}
-.nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0}
-.nav ul a{text-decoration:none;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:color .2s}
-.nav ul a:hover{color:var(--ink)}
-.lista-btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:11px 20px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
-.lista-btn svg{width:18px;height:18px}
-.badge{background:var(--teal);color:var(--night);border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px;font-weight:600;padding:0 6px}
-
-/* Ticker */
-.ticker{background:var(--night);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-size:13px;letter-spacing:.24em;text-transform:uppercase}
-.ticker-track{display:inline-flex;gap:48px;animation:tick 32s linear infinite;padding-left:48px}
-.ticker-track span{display:inline-flex;align-items:center;gap:48px}
-.ticker-track span::after{content:"✦";color:var(--teal)}
-@keyframes tick{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+header{position:sticky;top:0;z-index:30;background:var(--white);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo img{height:48px;width:auto}
+.nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink);padding:6px 0;border-bottom:1px solid transparent}
+.nav ul a:hover{border-color:var(--black)}
+.tools{display:flex;align-items:center;gap:20px}
+.tools a,.tools button{display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:0;font-size:14px;font-weight:600;text-decoration:none}
+.tools svg{width:22px;height:22px}
+.count{background:var(--aqua);color:var(--black);min-width:22px;height:22px;border-radius:11px;display:inline-grid;place-items:center;font-size:12px;font-weight:700;padding:0 6px}
 
 /* Hero */
-.hero{padding:72px 0 96px}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
-.hero h1{font-size:clamp(46px,7vw,92px)}
-.hero p.lead{font-size:20px;color:var(--muted);max-width:30em;margin:28px 0 36px;font-weight:300}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.hero-proof{display:flex;gap:28px 36px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
-.hero-proof b{display:block;font-family:var(--f-display);font-size:30px;font-weight:400}
-.hero-proof span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.frame{position:relative;padding:0 0 36px 36px}
-.frame::before{content:"";position:absolute;left:0;bottom:0;width:78%;height:82%;background:var(--teal)}
-.frame img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
-.tag-card{position:absolute;right:-18px;top:44px;background:var(--surface);padding:16px 20px;box-shadow:0 18px 40px rgba(15,29,27,.14);border-radius:var(--radius);max-width:220px}
-.tag-card small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:4px}
-.tag-card b{font-family:var(--f-display);font-weight:400;font-size:19px;line-height:1.2;display:block}
+.hero{padding:32px 0 0}
+.hero-box{position:relative;background:var(--aqua-soft);min-height:600px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.hero-photo{grid-column:2;position:relative}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+.hero-copy{grid-column:1;grid-row:1;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:56px}
+.hero h1{font-size:clamp(60px,8.4vw,124px);line-height:.92;color:var(--black)}
+.hero h1 span{display:block;padding-left:.5em}
+.hero-copy p{font-size:19px;max-width:24em;margin:28px 0 32px;color:var(--ink)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-ctas .btn:last-child{background:var(--white);color:var(--black);border-color:var(--white)}
+.hero-ctas .btn:last-child:hover{background:var(--black);color:var(--white);border-color:var(--black)}
 
-/* Promesa diaria */
-.daily{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.daily-grid{display:grid;grid-template-columns:repeat(3,1fr)}
-.daily-item{padding:56px 36px;border-left:1px solid var(--line)}
-.daily-item:first-child{border-left:0}
-.daily-item .num{font-family:var(--f-display);font-style:italic;color:var(--teal-deep);font-size:22px}
-.daily-item h3{font-size:30px;margin:10px 0 12px}
-.daily-item p{margin:0;color:var(--muted)}
+/* Intro + historia */
+.intro{padding:104px 0 64px}
+.story{position:relative;padding:0 0 112px}
+.story::before{content:"";position:absolute;left:0;right:0;top:110px;height:calc(100% - 270px);background:var(--aqua)}
+.story-grid{position:relative;display:grid;grid-template-columns:5fr 6fr;gap:72px;align-items:start}
+.story-photo{position:relative;padding:0 0 32px 0}
+.story-photo::after{content:"";position:absolute;left:32px;right:-32px;bottom:0;top:72px;background:var(--black);z-index:0}
+.story-photo img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%}
+.story-photo .cap{position:absolute;right:-20px;bottom:6px;z-index:2;color:var(--white);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.story-txt{padding-top:24px}
+.story-txt .lead{font-size:17px;color:var(--gray);max-width:28em;margin:0 0 96px}
+.story-txt h2{font-size:clamp(34px,4vw,50px);margin:0 0 24px}
+.story-txt p{margin:0 0 18px;font-size:17px;color:var(--black)}
+.story-txt .quote{font-family:var(--serif);font-size:24px;line-height:1.3;margin:28px 0 8px}
+.sign{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:24px}
+.sign b{font-weight:600}
 
-/* Historia */
-.story{padding:120px 0}
-.story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
-.story-photo{position:sticky;top:110px}
-.story-photo .label{position:absolute;left:0;top:0;width:82%;height:62%;background:var(--night);color:#fff;padding:28px 32px;font-size:13px;letter-spacing:.32em;text-transform:uppercase}
-.story-photo img{position:relative;margin:76px 0 0 56px;width:calc(100% - 56px);aspect-ratio:3/4;object-fit:cover;object-position:center 25%}
-.story h2{margin-bottom:36px}
-.story-text p{margin:0 0 22px;font-size:18px;font-weight:300}
-.story-text p:first-of-type::first-letter{font-family:var(--f-display);float:left;font-size:76px;line-height:.8;padding:8px 12px 0 0;color:var(--teal-deep)}
-blockquote{margin:44px 0 24px;padding:8px 0 8px 28px;border-left:3px solid var(--teal);font-family:var(--f-display);font-style:italic;font-size:clamp(24px,3vw,32px);line-height:1.3}
-.firma{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.firma b{color:var(--ink);font-weight:500}
-.ig{display:inline-flex;align-items:center;gap:10px;margin-top:20px;color:var(--teal-deep);text-decoration:none;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:2px}
-.ig svg{width:20px;height:20px}
-
-/* Cómo funciona */
-.how{background:var(--night);color:#fff;padding:110px 0}
-.how .eyebrow{color:var(--teal)}
-.how h2 em{color:var(--teal)}
-.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:64px}
-.step{border-top:1px solid rgba(255,255,255,.2);padding-top:26px}
-.step .n{font-family:var(--f-display);font-size:54px;color:var(--teal);line-height:1}
-.step h3{font-size:24px;margin:18px 0 10px}
-.step p{margin:0;color:rgba(255,255,255,.7);font-size:16px;font-weight:300}
+/* Promesa */
+.promise{padding:104px 0}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:64px}
+.promise-item .n{font-family:var(--serif);font-size:30px;color:var(--aqua);-webkit-text-stroke:1px #4FC7B5;margin-right:8px}
+.promise-item h3{font-size:26px;display:flex;align-items:baseline;margin:0 0 14px}
+.promise-item p{margin:0;color:var(--gray);font-size:16px}
 
 /* Catálogo */
-.catalog{padding:120px 0}
-.cat-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
-.cat-head p{color:var(--muted);margin:16px 0 0;max-width:34em}
-.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--ink);padding:8px 2px;min-width:280px}
-.search svg{width:18px;height:18px;color:var(--muted)}
-.search input{border:0;background:transparent;font:inherit;font-size:16px;outline:none;width:100%;color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px}
-.card{display:flex;flex-direction:column}
-.card .ph{position:relative;aspect-ratio:1;background:var(--surface);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.catalog{padding:16px 0 112px}
+.cat-head{text-align:center;margin-bottom:48px}
+.cat-head p.sub{color:var(--gray);max-width:34em;margin:18px auto 28px;font-size:17px}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--black);padding:8px 0;width:320px;margin:0 auto}
+.search svg{width:18px;height:18px}
+.search input{border:0;background:transparent;font:inherit;font-size:16px;outline:none;width:100%}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:44px 22px}
+.card .ph{position:relative;aspect-ratio:3/4;background:var(--soft);overflow:hidden;display:grid;place-items:center}
 .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.card:hover .ph img{transform:scale(1.04)}
-.card .ph .noimg{font-family:var(--f-display);font-size:64px;color:var(--teal-soft)}
-.card .nuevo{position:absolute;left:12px;top:12px;background:var(--teal);color:var(--night);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;font-weight:600}
-.card .fav{position:absolute;right:10px;top:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--ink)}
-.card .fav svg{width:18px;height:18px}
-.card .fav[aria-pressed="true"]{background:var(--ink);color:var(--teal)}
-.card .orig{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:16px 0 4px}
-.card h3{font-family:var(--f-body);font-size:17px;font-weight:500;line-height:1.35;letter-spacing:0;margin:0 0 6px}
-.card .precio{font-family:var(--f-display);font-style:italic;color:var(--teal-deep);font-size:17px;margin-bottom:14px}
-.card .cot{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--ink);background:transparent;border-radius:999px;padding:11px 14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-decoration:none;color:var(--ink);transition:background .2s,color .2s}
-.card .cot:hover{background:var(--ink);color:#fff}
-.card .cot svg{width:16px;height:16px}
-.skel .ph{background:linear-gradient(90deg,#efece6 25%,#f7f5f1 50%,#efece6 75%);background-size:200% 100%;animation:sh 1.4s infinite}
-.skel .l{height:14px;background:#efece6;margin-top:14px;width:70%}
+.card:hover .ph img{transform:scale(1.03)}
+.card .noimg{font-family:var(--serif);font-size:72px;color:#DDDDDA}
+.card .new{position:absolute;left:12px;top:12px;background:var(--white);color:var(--black);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px}
+.card .bag{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border-radius:50%;border:0;background:var(--white);display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.card .bag svg{width:20px;height:20px}
+.card .bag[aria-pressed="true"]{background:var(--black);color:var(--aqua)}
+.card h3{font-family:var(--sans);font-size:16px;font-weight:600;line-height:1.35;margin:16px 0 4px}
+.card .q{font-size:15px;color:var(--gray);margin:0 0 12px}
+.skel .ph{background:linear-gradient(90deg,#eeeeec 25%,#f7f7f5 50%,#eeeeec 75%);background-size:200% 100%;animation:sh 1.4s infinite}
+.skel .l{height:14px;background:#eeeeec;margin-top:14px;width:70%}
 @keyframes sh{to{background-position:-200% 0}}
-.state{grid-column:1/-1;text-align:center;padding:64px 24px;border:1px dashed var(--line);background:var(--surface)}
-.state h3{font-size:30px;margin-bottom:10px}
-.state p{color:var(--muted);margin:0 auto 24px;max-width:32em}
+.state{grid-column:1/-1;background:var(--soft);padding:64px 24px;text-align:center}
+.state h3{font-size:32px;margin:0 0 10px}
+.state p{color:var(--gray);margin:0 auto 24px;max-width:30em}
 .more{text-align:center;margin-top:48px}
 
-/* Encargo */
-.encargo{padding:0 0 120px}
-.encargo-box{background:var(--teal-soft);display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:72px;align-items:center}
-.encargo-box p{color:#33504c;font-size:18px;font-weight:300;margin:20px 0 0}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.chips a{border:1px solid var(--teal-deep);color:var(--teal-deep);text-decoration:none;border-radius:999px;padding:8px 16px;font-size:14px;transition:background .2s,color .2s}
-.chips a:hover{background:var(--teal-deep);color:#fff}
-form.f{display:grid;gap:14px}
-.f label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:grid;gap:6px}
-.f input,.f textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #c9dcd8;background:#fff;border-radius:var(--radius);color:var(--ink);text-transform:none;letter-spacing:0;resize:vertical}
+/* Bloque oscuro: cómo funciona */
+.how-wrap{padding:0 0 112px}
+.how{background:var(--black);color:var(--white);display:grid;grid-template-columns:4fr 7fr;gap:56px;padding:80px 72px;align-items:center}
+.how h2{color:var(--white);font-size:clamp(38px,4.4vw,56px);margin-bottom:20px}
+.how .kicker{color:#BDBDBD;justify-content:flex-start}
+.how .kicker::after{background:var(--aqua)}
+.how-intro p{color:#D6D6D6;margin:0 0 32px;font-size:17px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.step{border:1px solid #333;padding:28px}
+.step b{display:block;font-family:var(--serif);font-weight:400;font-size:44px;line-height:1;color:var(--aqua);margin-bottom:16px}
+.step h3{color:var(--white);font-size:24px;margin:0 0 8px}
+.step p{margin:0;color:#C9C9C9;font-size:15px}
 
-/* Garantías */
-.trust{border-top:1px solid var(--line);padding:72px 0}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
-.trust-item svg{width:30px;height:30px;color:var(--teal-deep);margin-bottom:14px}
-.trust-item b{display:block;font-weight:500;margin-bottom:4px}
-.trust-item span{color:var(--muted);font-size:15px}
+/* Encargo */
+.encargo{padding:0 0 112px}
+.encargo-box{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.encargo-box h2{font-size:clamp(34px,4vw,50px);margin-bottom:20px}
+.encargo-box > div > p{color:var(--gray);font-size:17px;margin:0;max-width:28em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chips a{border:1px solid var(--black);text-decoration:none;padding:9px 16px;font-size:14px;font-weight:500}
+.chips a:hover{background:var(--aqua);border-color:var(--aqua)}
+form.f{display:grid;gap:14px;background:var(--aqua-soft);padding:40px}
+.f label{display:grid;gap:6px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.f input,.f textarea{font:inherit;font-size:16px;padding:14px;border:1px solid #BFD9D4;background:var(--white);border-radius:0;resize:vertical;text-transform:none;letter-spacing:0;font-weight:400}
 
 /* Footer */
-footer{background:var(--night);color:rgba(255,255,255,.75);padding:72px 0 36px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
-.foot-logo{background:#fff;display:inline-block;padding:10px 18px;border-radius:var(--radius)}
-.foot-logo img{height:48px;width:auto}
-footer h4{color:#fff;font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;margin:0 0 16px}
-footer a{text-decoration:none;display:block;margin-bottom:8px}
-footer a:hover{color:var(--teal)}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:56px;padding-top:24px;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+.foot-grid .logo img{height:56px}
+.foot-grid > div:first-child p{color:var(--gray);max-width:24em;margin:20px 0 0}
+footer h4{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin:0 0 16px}
+footer a{display:block;text-decoration:none;font-size:15px;margin-bottom:10px}
+footer a:hover{text-decoration:underline}
+.foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--gray)}
 
 /* WhatsApp flotante */
-.wa-float{position:fixed;right:22px;bottom:22px;z-index:25;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.2);transition:transform .2s}
-.wa-float:hover{transform:scale(1.07)}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:25;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.22)}
 .wa-float svg{width:30px;height:30px}
 
-/* Lista de cotización */
-.drawer-bg{position:fixed;inset:0;background:rgba(15,29,27,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--paper);z-index:41;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column}
+/* Lista */
+.drawer-bg{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--white);z-index:41;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column}
 body.open .drawer-bg{opacity:1;pointer-events:auto}
 body.open .drawer{transform:none}
-.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:24px 28px;border-bottom:1px solid var(--line)}
+.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line)}
 .drawer-h h3{font-size:28px}
-.x{border:0;background:transparent;width:40px;height:40px;display:grid;place-items:center;color:var(--ink)}
+.x{border:0;background:none;width:40px;height:40px;display:grid;place-items:center}
 .x svg{width:22px;height:22px}
-.drawer-b{flex:1;overflow:auto;padding:20px 28px}
-.li{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
-.li .t{width:64px;height:64px;object-fit:cover;background:var(--surface);border:1px solid var(--line)}
-.li b{font-weight:500;font-size:15px;line-height:1.3;display:block}
-.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;margin-top:6px}
-.qty button{border:0;background:transparent;width:30px;height:28px}
-.qty span{min-width:22px;text-align:center;font-size:14px}
-.rm{border:0;background:transparent;color:var(--muted);font-size:13px;text-decoration:underline}
-.drawer-f{padding:20px 28px 28px;border-top:1px solid var(--line);background:var(--surface)}
-.drawer-f .f{margin-bottom:16px}
+.drawer-b{flex:1;overflow:auto;padding:8px 24px}
+.li{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.li .t{width:72px;height:96px;object-fit:cover;background:var(--soft)}
+.li b{font-size:15px;font-weight:600;line-height:1.3;display:block}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--black);margin-top:8px}
+.qty button{border:0;background:none;width:32px;height:30px;font-size:16px}
+.qty span{min-width:24px;text-align:center;font-size:14px;font-weight:600}
+.rm{border:0;background:none;font-size:13px;text-decoration:underline;text-underline-offset:4px;color:var(--gray)}
+.drawer-f{padding:20px 24px 24px;border-top:1px solid var(--line)}
+.drawer-f .f{padding:0;background:none;gap:12px}
+.drawer-f .f input{border-color:var(--line)}
 .drawer-f .btn{width:100%}
-.empty-list{text-align:center;color:var(--muted);padding:48px 0}
-.empty-list b{display:block;font-family:var(--f-display);font-weight:400;color:var(--ink);font-size:24px;margin-bottom:8px}
-.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:999px;font-size:14px;z-index:50;opacity:0;transition:.25s;pointer-events:none}
+.empty-list{text-align:center;color:var(--gray);padding:56px 8px}
+.empty-list b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;color:var(--black);margin-bottom:8px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);background:var(--black);color:var(--white);padding:12px 22px;font-size:14px;font-weight:500;z-index:50;opacity:0;transition:.2s;pointer-events:none}
 .toast.on{opacity:1;transform:translate(-50%,0)}
 
 /* Responsive */
-@media (max-width:1000px){
+@media (max-width:1024px){
   .nav ul{display:none}
-  .hero-grid,.story-grid,.encargo-box{grid-template-columns:1fr}
-  .hero-grid{gap:48px}
-  .frame{max-width:520px}
-  .story-photo{position:relative;top:0;max-width:520px}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .how-grid,.trust-grid{grid-template-columns:repeat(2,1fr)}
-  .daily-grid{grid-template-columns:1fr}
-  .daily-item{border-left:0;border-top:1px solid var(--line);padding:40px 0}
-  .daily-item:first-child{border-top:0}
-  .encargo-box{padding:48px 32px}
+  .hero-box{grid-template-columns:1fr;min-height:0}
+  .hero-photo{grid-column:1;grid-row:1;aspect-ratio:4/5;max-height:70vh}
+  .hero-copy{grid-row:2;padding:0 32px 48px}
+  .hero-copy{padding-top:36px}
+  .hero h1 span{padding-left:.4em}
+  .story::before{top:200px;height:auto;bottom:112px}
+  .story-grid{grid-template-columns:1fr;gap:40px}
+  .story-photo{max-width:480px}
+  .story-txt .lead{margin-bottom:40px;color:var(--ink)}
+  .promise-grid{grid-template-columns:1fr;gap:40px;max-width:560px;margin-left:auto;margin-right:auto}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .how{grid-template-columns:1fr;padding:56px 40px}
+  .encargo-box{grid-template-columns:1fr;gap:40px}
   .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid > div:first-child{grid-column:1/-1}
 }
-@media (max-width:600px){
-  body{font-size:16px}
+@media (max-width:640px){
   .wrap{padding:0 16px}
+  .promo span:not(:first-child){display:none}
   .nav{height:68px}
-  .logo img{height:42px}
-  .lista-btn .txt{display:none}
-  .hero{padding:44px 0 72px}
-  .hero p.lead{font-size:18px}
-  .frame{padding:0 0 24px 24px}
-  .tag-card{right:8px;top:auto;bottom:48px}
-  .story,.catalog{padding:80px 0}
-  .story-photo img{margin:56px 0 0 32px;width:calc(100% - 32px)}
-  .grid{gap:28px 14px}
-  .card h3{font-size:15px}
-  .card .cot{font-size:11px;letter-spacing:.1em;padding:10px 8px}
-  .how{padding:80px 0}
-  .how-grid,.trust-grid,.foot-grid{grid-template-columns:1fr}
-  .search{min-width:0;width:100%}
-  .encargo-box{padding:36px 20px}
-  .tag-card{max-width:180px}
-  .hero h1{font-size:44px}
+  .logo img{height:40px}
+  .tools .t-txt{display:none}
+  .hero{padding:16px 0 0}
+  .hero-copy{padding:0 20px 40px}
+  .hero h1{font-size:64px}
+  .hero-copy p{font-size:17px}
   .hero-ctas .btn{flex:1 1 100%}
+  .intro{padding:72px 0 48px}
+  .story{padding-bottom:72px}
+  .story::before{bottom:72px}
+  .story-photo::after{left:20px;right:-12px}
+  .story-photo .cap{right:-4px}
+  .story-txt .quote{font-size:21px}
+  .promise{padding:72px 0}
+  .catalog{padding:0 0 72px}
+  .search{width:100%}
+  .grid{grid-template-columns:repeat(2,1fr);gap:28px 12px}
+  .card h3{font-size:14px}
+  .card .q{font-size:14px}
+  .card .bag{width:38px;height:38px;right:8px;bottom:8px}
+  .how-wrap{padding:0 0 72px}
+  .how-wrap .wrap{padding:0}
+  .how{padding:56px 20px}
+  .steps{grid-template-columns:1fr}
+  .encargo{padding:0 0 72px}
+  form.f{padding:24px 16px}
+  .foot-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>Cada día una tienda nueva</span><span>Un descuento único</span><span>Las mejores marcas a los mejores precios</span><span>100% originales</span><span>De USA a Colombia</span>
-    <span>Cada día una tienda nueva</span><span>Un descuento único</span><span>Las mejores marcas a los mejores precios</span><span>100% originales</span><span>De USA a Colombia</span>
-  </div>
-</div>
+<div class="promo"><span>Cada día una tienda nueva</span><span>Un descuento único</span><span>Las mejores marcas a los mejores precios</span></div>
 
 <header>
   <nav class="wrap nav" aria-label="Principal">
     <a class="logo" href="#inicio" aria-label="Arya Personal Shopper, inicio"><img src="img/logo-arya.png" alt="Arya Personal Shopper"></a>
     <ul>
+      <li><a href="#inicio">Inicio</a></li>
       <li><a href="#historia">Mi historia</a></li>
-      <li><a href="#como-funciona">Cómo funciona</a></li>
       <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
       <li><a href="#encargo">Encargos</a></li>
     </ul>
-    <button class="lista-btn" type="button" data-open-list aria-label="Abrir mi lista de cotización">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
-      <span class="txt">Mi lista</span><span class="badge" id="count">0</span>
-    </button>
+    <div class="tools">
+      <a href="https://www.instagram.com/aryamedellin/" target="_blank" rel="noopener" aria-label="Instagram @aryamedellin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+      <button type="button" data-open-list aria-label="Abrir mi lista de cotización"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="t-txt">Mi lista</span><span class="count" id="count">0</span></button>
+    </div>
   </nav>
 </header>
 
 <main id="inicio">
 
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Personal shopper · USA → Colombia</p>
-      <h1>Lo que amas de USA, <em>original</em> y hasta tu puerta.</h1>
-      <p class="lead">Soy Melissa, paisa de corazón y vivo en Estados Unidos. Busco, compro y te envío a Colombia productos 100% originales de las mejores marcas, al mejor precio.</p>
-      <div class="hero-ctas">
-        <a class="btn" href="#catalogo">Ver catálogo</a>
-        <a class="btn ghost" data-wa="Hola Melissa, quiero pedir una cotización con Arya." href="#">Pedir cotización</a>
+  <div class="wrap">
+    <div class="hero-box">
+      <div class="hero-photo"><img src="img/melissa.jpg" alt="Melissa Lopera, fundadora de Arya" width="900" height="1600"></div>
+      <div class="hero-copy">
+        <h1>Personal <span>shopper</span></h1>
+        <p>Originales de Estados Unidos, hasta tu puerta en Colombia. Las mejores marcas a los mejores precios.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#catalogo">Ver catálogo</a>
+          <a class="btn" href="#" data-wa="Hola Melissa, quiero pedir una cotización con Arya.">Pedir cotización</a>
+        </div>
       </div>
-      <div class="hero-proof">
-        <div><b>100%</b><span>Originales</span></div>
-        <div><b>Cada día</b><span>Una tienda nueva</span></div>
-        <div><b>USA → COL</b><span>Envío seguro</span></div>
-      </div>
-    </div>
-    <div class="frame">
-      <img src="img/melissa.jpg" alt="Melissa Lopera, fundadora de Arya Personal Shopper" width="900" height="1600">
-      <div class="tag-card"><small>Fundadora</small><b>Melissa Lopera</b></div>
     </div>
   </div>
 </section>
 
-<section class="daily" aria-label="Lo que te ofrece Arya cada día">
-  <div class="wrap daily-grid">
-    <div class="daily-item"><span class="num">01.</span><h3>Cada día una tienda nueva</h3><p>Recorro outlets, malls y tiendas de marca para traerte lo que no se consigue en Colombia.</p></div>
-    <div class="daily-item"><span class="num">02.</span><h3>Un descuento único</h3><p>Cazo las ofertas del día y te las paso a ti. Lo que encuentro en promo, tú lo aprovechas.</p></div>
-    <div class="daily-item"><span class="num">03.</span><h3>Las mejores marcas a los mejores precios</h3><p>Perfumes, maquillaje, tenis, ropa y bolsos. Originales, con factura de tienda.</p></div>
+<section class="intro">
+  <div class="wrap">
+    <p class="kicker">De USA a Colombia</p>
+    <h2 class="title">Me encanta ayudarte a conseguir lo que amas, original y al mejor precio.</h2>
   </div>
 </section>
 
 <section class="story" id="historia">
   <div class="wrap story-grid">
     <div class="story-photo">
-      <div class="label">Mi historia</div>
       <img src="img/melissa.jpg" alt="Melissa Lopera sonriendo" loading="lazy" width="900" height="1600">
+      <span class="cap">Melissa Lopera</span>
     </div>
-    <div>
-      <p class="eyebrow">Hecho con amor, desde Medellín</p>
-      <h2>¿Te imaginas cambiar tu vida <em>por amor?</em> Yo lo hice.</h2>
-      <div class="story-text">
-        <p>Me llamo Melissa Lopera y nací en Medellín, entre montañas, tinto a las seis de la mañana y una mamá que me enseñó que las cosas buenas se hacen con cariño. Tenía mi trabajo, mis amigas de toda la vida, mi barrio y mis domingos en familia. Tenía la vida armadita.</p>
-        <p>Y un día el amor me cambió el mapa. Él vivía en Estados Unidos y yo tuve que decidir. ¿Te imaginas meter tu vida entera en dos maletas? Pues yo lo hice. Lo dejé todoooo: mi casa, mi trabajo, los abrazos de mi mamá y hasta la arepa de la mañana.</p>
-        <p>Los primeros meses no fueron fáciles. Extrañaba mi gente, mi idioma, mi ciudad. Hasta que empezaron a llegar los mensajes: <i>"Meli, ¿me traes un perfume original?"</i>, <i>"¿Me consigues esos tenis que allá están a mitad de precio?"</i>. Cada encargo era una excusa para sentirme cerca de casa.</p>
-        <p>Empecé recorriendo tiendas los fines de semana, comparando precios y empacando cada pedido como si fuera para mi hermana. Mis amigas les contaron a sus amigas, y ellas a las suyas. Así nació <b>Arya</b>: un puente entre las dos tierras que amo.</p>
-        <p>Hoy cada día visito una tienda nueva, cazo descuentos únicos y te traigo las mejores marcas, originales y al mejor precio. Porque sé lo que se siente esperar algo especial desde lejos, y quiero que cuando abras tu paquete sientas lo mismo que yo siento cuando llego a Medellín: que valió la pena.</p>
-      </div>
-      <blockquote>"Me fui por amor. Y por amor sigo conectada con mi gente, un pedido a la vez."</blockquote>
-      <p class="firma"><b>Melissa Lopera</b> · Fundadora de Arya</p>
-      <a class="ig" href="https://www.instagram.com/aryamedellin/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Sígueme en @aryamedellin</a>
+    <div class="story-txt">
+      <p class="lead">Soy de Medellín, vivo en Estados Unidos y cada semana recorro tiendas buscando lo que mis clientas quieren.</p>
+      <p class="kicker left">Mi historia</p>
+      <h2>¿Te imaginas cambiar tu vida por amor? Yo lo hice.</h2>
+      <p>Tenía mi trabajo, mis amigas de toda la vida y mis domingos en familia. Un día el amor me llevó a Estados Unidos y metí mi vida entera en dos maletas. Lo dejé todoooo.</p>
+      <p>Al principio extrañaba todo. Hasta que mis amigas empezaron a escribirme: "Meli, ¿me traes un perfume original?". Cada encargo me hacía sentir cerca de casa, y así nació Arya: el puente entre las dos tierras que amo.</p>
+      <p class="quote">"Me fui por amor. Y por amor sigo conectada con mi gente, un pedido a la vez."</p>
+      <div class="sign"><b>Melissa Lopera, fundadora</b><a class="link" href="https://www.instagram.com/aryamedellin/" target="_blank" rel="noopener">@aryamedellin</a></div>
     </div>
   </div>
 </section>
 
-<section class="how" id="como-funciona">
+<section class="promise" aria-label="La promesa de Arya">
   <div class="wrap">
-    <p class="eyebrow">Cómo funciona</p>
-    <h2>Tu compra en USA, <em>sin complicaciones.</em></h2>
-    <div class="how-grid">
-      <div class="step"><div class="n">1</div><h3>Elige</h3><p>Mira el catálogo o cuéntame qué producto estás buscando.</p></div>
-      <div class="step"><div class="n">2</div><h3>Pide tu cotización</h3><p>Me escribes por WhatsApp y te envío el precio final, con envío incluido.</p></div>
-      <div class="step"><div class="n">3</div><h3>Lo compro por ti</h3><p>Con tu confirmación compro en tiendas oficiales de Estados Unidos.</p></div>
-      <div class="step"><div class="n">4</div><h3>Te llega a Colombia</h3><p>Lo empaco con cuidado y te lo envío hasta tu ciudad.</p></div>
+    <p class="kicker">Mi promesa</p>
+    <h2 class="title">Lo que encuentro en USA, te lo traigo a ti</h2>
+    <div class="promise-grid">
+      <div class="promise-item"><h3><span class="n">01.</span>Cada día una tienda nueva</h3><p>Recorro outlets, malls y tiendas oficiales para traerte lo que no se consigue en Colombia.</p></div>
+      <div class="promise-item"><h3><span class="n">02.</span>Un descuento único</h3><p>Cazo las ofertas del día y te las paso. Lo que encuentro en promoción, tú lo aprovechas.</p></div>
+      <div class="promise-item"><h3><span class="n">03.</span>Las mejores marcas</h3><p>Perfumes, maquillaje, tenis, ropa y bolsos a los mejores precios. Siempre originales.</p></div>
     </div>
   </div>
 </section>
@@ -338,54 +319,60 @@ body.open .drawer{transform:none}
 <section class="catalog" id="catalogo">
   <div class="wrap">
     <div class="cat-head">
-      <div>
-        <p class="eyebrow">Catálogo Arya</p>
-        <h2>Recién llegado <em>de USA</em></h2>
-        <p>Agrega a tu lista lo que te guste y pide una sola cotización por WhatsApp. Los precios cambian con las ofertas del día, por eso te cotizo al momento.</p>
-      </div>
+      <p class="kicker">Catálogo Arya</p>
+      <h2 class="title">Lo nuevo de la semana</h2>
+      <p class="sub">Los precios cambian con las ofertas del día. Agrega a tu lista lo que te guste y te cotizo todo por WhatsApp.</p>
       <label class="search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Buscar producto…" aria-label="Buscar producto">
+        <input id="q" type="search" placeholder="Buscar producto" aria-label="Buscar producto">
       </label>
     </div>
     <div class="grid" id="grid" aria-live="polite"></div>
-    <div class="more" id="more" hidden><button class="btn ghost" type="button" id="more-btn">Ver más productos</button></div>
+    <div class="more" id="more" hidden><button class="btn" type="button" id="more-btn">Ver más productos</button></div>
+  </div>
+</section>
+
+<section class="how-wrap" id="como-funciona">
+  <div class="wrap">
+    <div class="how">
+      <div class="how-intro">
+        <p class="kicker">Cómo funciona</p>
+        <h2>Es muy simple</h2>
+        <p>Tú eliges, yo compro en Estados Unidos y te lo envío a Colombia. Hablas directo conmigo de principio a fin.</p>
+        <a class="btn light" href="#" data-wa="Hola Melissa, quiero saber cómo funciona Arya.">Escríbeme</a>
+      </div>
+      <div class="steps">
+        <div class="step"><b>1</b><h3>Elige</h3><p>Mira el catálogo o dime qué producto buscas.</p></div>
+        <div class="step"><b>2</b><h3>Cotiza</h3><p>Te envío el precio final por WhatsApp, con envío.</p></div>
+        <div class="step"><b>3</b><h3>Compro por ti</h3><p>Con tu confirmación compro en tiendas oficiales.</p></div>
+        <div class="step"><b>4</b><h3>Te llega</h3><p>Lo empaco con cuidado y te lo envío a tu ciudad.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="encargo" id="encargo">
-  <div class="wrap">
-    <div class="encargo-box">
-      <div>
-        <p class="eyebrow">Encargos personalizados</p>
-        <h2>¿No ves lo que <em>buscas?</em></h2>
-        <p>Mándame el nombre, la foto o el enlace del producto y yo lo busco por ti en las tiendas de Estados Unidos.</p>
-        <div class="chips">
-          <a href="#" data-wa="Hola Melissa, estoy buscando un perfume original. ¿Me ayudas con una cotización?">Perfumes</a>
-          <a href="#" data-wa="Hola Melissa, estoy buscando maquillaje original. ¿Me ayudas con una cotización?">Maquillaje</a>
-          <a href="#" data-wa="Hola Melissa, estoy buscando tenis originales. ¿Me ayudas con una cotización?">Tenis</a>
-          <a href="#" data-wa="Hola Melissa, estoy buscando ropa. ¿Me ayudas con una cotización?">Ropa</a>
-          <a href="#" data-wa="Hola Melissa, estoy buscando un bolso original. ¿Me ayudas con una cotización?">Bolsos</a>
-          <a href="#" data-wa="Hola Melissa, estoy buscando vitaminas y suplementos. ¿Me ayudas con una cotización?">Vitaminas</a>
-          <a href="#" data-wa="Hola Melissa, estoy buscando tecnología. ¿Me ayudas con una cotización?">Tecnología</a>
-        </div>
+  <div class="wrap encargo-box">
+    <div>
+      <p class="kicker left">Encargos</p>
+      <h2>¿No ves lo que buscas? Te lo consigo.</h2>
+      <p>Mándame el nombre, la foto o el enlace del producto y lo busco por ti en Estados Unidos.</p>
+      <div class="chips">
+        <a href="#" data-wa="Hola Melissa, estoy buscando un perfume original. ¿Me ayudas con una cotización?">Perfumes</a>
+        <a href="#" data-wa="Hola Melissa, estoy buscando maquillaje original. ¿Me ayudas con una cotización?">Maquillaje</a>
+        <a href="#" data-wa="Hola Melissa, estoy buscando tenis originales. ¿Me ayudas con una cotización?">Tenis</a>
+        <a href="#" data-wa="Hola Melissa, estoy buscando ropa. ¿Me ayudas con una cotización?">Ropa</a>
+        <a href="#" data-wa="Hola Melissa, estoy buscando un bolso original. ¿Me ayudas con una cotización?">Bolsos</a>
+        <a href="#" data-wa="Hola Melissa, estoy buscando vitaminas y suplementos. ¿Me ayudas con una cotización?">Vitaminas</a>
+        <a href="#" data-wa="Hola Melissa, estoy buscando tecnología. ¿Me ayudas con una cotización?">Tecnología</a>
       </div>
-      <form class="f" id="f-encargo">
-        <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
-        <label>Ciudad en Colombia<input name="ciudad" required autocomplete="address-level2"></label>
-        <label>¿Qué estás buscando?<textarea name="detalle" rows="4" required placeholder="Marca, referencia, talla, color o el enlace del producto"></textarea></label>
-        <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Enviar por WhatsApp</button>
-      </form>
     </div>
-  </div>
-</section>
-
-<section class="trust" aria-label="Garantías">
-  <div class="wrap trust-grid">
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><b>100% originales</b><span>Comprados en tiendas oficiales, con factura.</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12V8l-8-5-8 5v8l8 5 3-1.9"/><path d="m4 8 8 5 8-5M12 13v8"/><path d="M17 17h5m-2-2 2 2-2 2"/></svg><b>Envío a toda Colombia</b><span>De Estados Unidos hasta tu ciudad.</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h18M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M7 15h4"/></svg><b>Pagos con abonos</b><span>Te explico las formas de pago al cotizar.</span></div>
-    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><b>Atención personal</b><span>Hablas directo conmigo, de principio a fin.</span></div>
+    <form class="f" id="f-encargo">
+      <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
+      <label>Ciudad<input name="ciudad" required autocomplete="address-level2"></label>
+      <label>¿Qué buscas?<textarea name="detalle" rows="4" required placeholder="Marca, referencia, talla, color o enlace"></textarea></label>
+      <button class="btn" type="submit">Enviar por WhatsApp</button>
+    </form>
   </div>
 </section>
 
@@ -395,24 +382,23 @@ body.open .drawer{transform:none}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <span class="foot-logo"><img src="img/logo-arya.png" alt="Arya Personal Shopper" loading="lazy"></span>
-        <p style="margin-top:20px;max-width:24em">Compras originales en Estados Unidos con entrega en Colombia. Cada día una tienda nueva, un descuento único, las mejores marcas a los mejores precios.</p>
+        <a class="logo" href="#inicio"><img src="img/logo-arya.png" alt="Arya Personal Shopper" loading="lazy"></a>
+        <p>Cada día una tienda nueva, un descuento único, las mejores marcas a los mejores precios.</p>
       </div>
       <div>
         <h4>Arya</h4>
         <a href="#historia">Mi historia</a>
-        <a href="#como-funciona">Cómo funciona</a>
         <a href="#catalogo">Catálogo</a>
+        <a href="#como-funciona">Cómo funciona</a>
         <a href="#encargo">Encargos</a>
       </div>
       <div>
         <h4>Contacto</h4>
-        <a href="#" data-wa="Hola Melissa, quiero información sobre Arya.">WhatsApp: +57 310 746 0713</a>
-        <a href="https://www.instagram.com/aryamedellin/" target="_blank" rel="noopener">Instagram: @aryamedellin</a>
-        <a href="#encargo">Haz tu encargo</a>
+        <a href="#" data-wa="Hola Melissa, quiero información sobre Arya.">WhatsApp +57 310 746 0713</a>
+        <a href="https://www.instagram.com/aryamedellin/" target="_blank" rel="noopener">Instagram @aryamedellin</a>
       </div>
     </div>
-    <div class="foot-bottom"><span>© <span id="yr"></span> Arya Personal Shopper · Melissa Lopera</span><span>Hecho con amor entre Medellín y USA</span></div>
+    <div class="foot-bottom"><span>© <span id="yr"></span> Arya Personal Shopper</span><span>Medellín · USA</span></div>
   </div>
 </footer>
 
@@ -430,8 +416,8 @@ body.open .drawer{transform:none}
   <div class="drawer-f" id="list-f">
     <form class="f" id="f-lista">
       <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
-      <label>Ciudad en Colombia<input name="ciudad" required autocomplete="address-level2"></label>
-      <button class="btn teal" type="submit">Pedir cotización por WhatsApp</button>
+      <label>Ciudad<input name="ciudad" required autocomplete="address-level2"></label>
+      <button class="btn" type="submit">Pedir cotización por WhatsApp</button>
     </form>
   </div>
 </aside>
@@ -452,8 +438,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const waUrl = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
 const abrirWa = msg => window.open(waUrl(msg), '_blank', 'noopener');
-const ICON_BOLSA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>';
-const ICON_WA = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>';
+const ICON_BOLSA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>';
 
 let sb = null, productos = [], urls = {}, visibles = POR_PAGINA, estado = 'cargando';
 
@@ -480,7 +465,7 @@ function pintarLista() {
   $('#count').textContent = lista.reduce((s, i) => s + i.cant, 0);
   $('#list-f').hidden = !lista.length;
   $('#list').innerHTML = lista.length ? lista.map(i => {
-    const p = productos.find(x => x.id === i.id), u = p && urls[p.id];
+    const u = urls[i.id];
     return `<div class="li">
       ${u ? `<img class="t" src="${esc(u)}" alt="">` : '<div class="t"></div>'}
       <div><b>${esc(i.nombre)}</b>
@@ -495,10 +480,10 @@ function abrirLista(on) {
 }
 
 // ---------- Catálogo ----------
+const normal = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 function filtrados() {
-  const q = $('#q').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-  if (!q) return productos;
-  return productos.filter(p => p.nombre.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').includes(q));
+  const q = normal($('#q').value.trim());
+  return q ? productos.filter(p => normal(p.nombre).includes(q)) : productos;
 }
 function pintarGrid() {
   const g = $('#grid');
@@ -507,38 +492,36 @@ function pintarGrid() {
     $('#more').hidden = true; return;
   }
   if (estado === 'error') {
-    g.innerHTML = `<div class="state"><h3>El catálogo se está actualizando</h3><p>Mientras tanto, escríbeme y te cuento qué tengo disponible hoy.</p><a class="btn" href="${waUrl('Hola Melissa, quiero ver qué productos tienes disponibles.')}" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>`;
+    g.innerHTML = `<div class="state"><h3>Catálogo en actualización</h3><p>Escríbeme y te cuento qué tengo disponible hoy.</p><a class="btn" href="${waUrl('Hola Melissa, quiero ver qué productos tienes disponibles.')}" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>`;
     $('#more').hidden = true; return;
   }
-  const lista_ = filtrados();
-  if (!lista_.length) {
+  const vis = filtrados();
+  if (!vis.length) {
     g.innerHTML = productos.length
-      ? `<div class="state"><h3>No encontré ese producto</h3><p>Pero seguro te lo consigo en USA. Pídemelo como encargo.</p><a class="btn" href="#encargo">Hacer un encargo</a></div>`
-      : `<div class="state"><h3>Pronto nuevos productos</h3><p>Estoy recorriendo tiendas. Escríbeme y te cuento las ofertas de hoy.</p><a class="btn" href="${waUrl('Hola Melissa, ¿qué ofertas tienes hoy?')}" target="_blank" rel="noopener">Ver ofertas de hoy</a></div>`;
+      ? `<div class="state"><h3>No encontré ese producto</h3><p>Seguro te lo consigo en USA. Pídemelo como encargo.</p><a class="btn" href="#encargo">Hacer un encargo</a></div>`
+      : `<div class="state"><h3>Pronto nuevos productos</h3><p>Estoy recorriendo tiendas. Escríbeme y te cuento las ofertas de hoy.</p><a class="btn" href="${waUrl('Hola Melissa, ¿qué ofertas tienes hoy?')}" target="_blank" rel="noopener">Ofertas de hoy</a></div>`;
     $('#more').hidden = true; return;
   }
   const semana = Date.now() - 7 * 864e5;
-  g.innerHTML = lista_.slice(0, visibles).map(p => {
+  g.innerHTML = vis.slice(0, visibles).map(p => {
     const u = urls[p.id], on = enLista(p.id);
     return `<article class="card">
       <div class="ph">
         ${u ? `<img src="${esc(u)}" alt="${esc(p.nombre)}" loading="lazy">` : `<span class="noimg">A</span>`}
-        ${p.creado > semana ? '<span class="nuevo">Nuevo</span>' : ''}
-        <button class="fav" type="button" data-fav="${esc(p.id)}" aria-pressed="${on}" aria-label="${on ? 'Quitar de' : 'Agregar a'} mi lista">${ICON_BOLSA}</button>
+        ${p.creado > semana ? '<span class="new">Nuevo</span>' : ''}
+        <button class="bag" type="button" data-fav="${esc(p.id)}" aria-pressed="${on}" aria-label="${on ? 'Quitar de' : 'Agregar a'} mi lista">${ICON_BOLSA}</button>
       </div>
-      <p class="orig">Original · USA</p>
       <h3>${esc(p.nombre)}</h3>
-      <div class="precio">Precio bajo cotización</div>
-      <a class="cot" href="${waUrl(`Hola Melissa, quiero pedir cotización de: ${p.nombre}`)}" target="_blank" rel="noopener">${ICON_WA}Pedir cotización</a>
+      <p class="q">Precio bajo cotización</p>
+      <a class="link" href="${waUrl(`Hola Melissa, quiero pedir cotización de: ${p.nombre}`)}" target="_blank" rel="noopener">Pedir cotización</a>
     </article>`;
   }).join('');
-  $('#more').hidden = lista_.length <= visibles;
+  $('#more').hidden = vis.length <= visibles;
 }
 
-async function firmarFotos(lista_) {
-  const nuevas = {};
-  const rutas = [];
-  lista_.forEach(p => {
+async function firmarFotos(lst) {
+  const nuevas = {}, rutas = [];
+  lst.forEach(p => {
     if (!p.foto) return;
     if (/^(data:|https?:)/.test(p.foto)) nuevas[p.id] = p.foto;
     else rutas.push(p);
@@ -556,9 +539,9 @@ async function cargar() {
   try {
     const { data, error } = await sb.rpc('catalogo_web');
     if (error) throw error;
-    const fotosAntes = JSON.stringify(productos.map(p => [p.id, p.foto]));
+    const antes = JSON.stringify(productos.map(p => [p.id, p.foto]));
     productos = (data || []).filter(p => p && p.nombre);
-    if (JSON.stringify(productos.map(p => [p.id, p.foto])) !== fotosAntes || !Object.keys(urls).length) {
+    if (JSON.stringify(productos.map(p => [p.id, p.foto])) !== antes || !Object.keys(urls).length) {
       urls = await firmarFotos(productos);
     }
     estado = 'listo';

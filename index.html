@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arya Personal Shopper · De USA a Colombia, originales</title>
+<meta name="description" content="Arya es la personal shopper de Melissa Lopera: compras originales en Estados Unidos con entrega en Colombia. Cada día una tienda nueva, un descuento único y las mejores marcas a los mejores precios.">
+<meta name="theme-color" content="#FAF8F4">
+<meta property="og:title" content="Arya Personal Shopper">
+<meta property="og:description" content="Productos originales de USA a Colombia. Pide tu cotización por WhatsApp.">
+<meta property="og:image" content="img/logo-arya.png">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --paper:#FAF8F4; --surface:#FFFFFF; --ink:#111111; --muted:#5E605F; --line:#E7E3DC;
+  --teal:#2EC4B0; --teal-deep:#0E7F72; --teal-soft:#DDF5F0; --night:#0F1D1B;
+  --f-display:"Bodoni Moda",Didot,"Times New Roman",serif;
+  --f-body:"Jost","Segoe UI",system-ui,sans-serif;
+  --wrap:1180px; --radius:4px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+.hero-grid>*,.story-grid>*,.encargo-box>*,.cat-head>*{min-width:0}
+html,body{overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--teal-deep);margin:0 0 18px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,56px)}
+em{font-style:italic;color:var(--teal-deep)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--ink);background:var(--ink);color:#fff;padding:15px 28px;border-radius:999px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.teal{background:var(--teal);border-color:var(--teal);color:var(--night)}
+.btn svg{width:18px;height:18px;flex:none}
+:focus-visible{outline:2px solid var(--teal-deep);outline-offset:3px}
+
+/* Header */
+header{position:sticky;top:0;z-index:30;background:rgba(250,248,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.logo img{height:52px;width:auto}
+.nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--ink)}
+.lista-btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:11px 20px;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.lista-btn svg{width:18px;height:18px}
+.badge{background:var(--teal);color:var(--night);border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px;font-weight:600;padding:0 6px}
+
+/* Ticker */
+.ticker{background:var(--night);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.ticker-track{display:inline-flex;gap:48px;animation:tick 32s linear infinite;padding-left:48px}
+.ticker-track span{display:inline-flex;align-items:center;gap:48px}
+.ticker-track span::after{content:"✦";color:var(--teal)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+/* Hero */
+.hero{padding:72px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,92px)}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:30em;margin:28px 0 36px;font-weight:300}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-proof{display:flex;gap:28px 36px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hero-proof b{display:block;font-family:var(--f-display);font-size:30px;font-weight:400}
+.hero-proof span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.frame{position:relative;padding:0 0 36px 36px}
+.frame::before{content:"";position:absolute;left:0;bottom:0;width:78%;height:82%;background:var(--teal)}
+.frame img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.tag-card{position:absolute;right:-18px;top:44px;background:var(--surface);padding:16px 20px;box-shadow:0 18px 40px rgba(15,29,27,.14);border-radius:var(--radius);max-width:220px}
+.tag-card small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-deep);margin-bottom:4px}
+.tag-card b{font-family:var(--f-display);font-weight:400;font-size:19px;line-height:1.2;display:block}
+
+/* Promesa diaria */
+.daily{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.daily-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.daily-item{padding:56px 36px;border-left:1px solid var(--line)}
+.daily-item:first-child{border-left:0}
+.daily-item .num{font-family:var(--f-display);font-style:italic;color:var(--teal-deep);font-size:22px}
+.daily-item h3{font-size:30px;margin:10px 0 12px}
+.daily-item p{margin:0;color:var(--muted)}
+
+/* Historia */
+.story{padding:120px 0}
+.story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
+.story-photo{position:sticky;top:110px}
+.story-photo .label{position:absolute;left:0;top:0;width:82%;height:62%;background:var(--night);color:#fff;padding:28px 32px;font-size:13px;letter-spacing:.32em;text-transform:uppercase}
+.story-photo img{position:relative;margin:76px 0 0 56px;width:calc(100% - 56px);aspect-ratio:3/4;object-fit:cover;object-position:center 25%}
+.story h2{margin-bottom:36px}
+.story-text p{margin:0 0 22px;font-size:18px;font-weight:300}
+.story-text p:first-of-type::first-letter{font-family:var(--f-display);float:left;font-size:76px;line-height:.8;padding:8px 12px 0 0;color:var(--teal-deep)}
+blockquote{margin:44px 0 24px;padding:8px 0 8px 28px;border-left:3px solid var(--teal);font-family:var(--f-display);font-style:italic;font-size:clamp(24px,3vw,32px);line-height:1.3}
+.firma{font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.firma b{color:var(--ink);font-weight:500}
+
+/* Cómo funciona */
+.how{background:var(--night);color:#fff;padding:110px 0}
+.how .eyebrow{color:var(--teal)}
+.how h2 em{color:var(--teal)}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:64px}
+.step{border-top:1px solid rgba(255,255,255,.2);padding-top:26px}
+.step .n{font-family:var(--f-display);font-size:54px;color:var(--teal);line-height:1}
+.step h3{font-size:24px;margin:18px 0 10px}
+.step p{margin:0;color:rgba(255,255,255,.7);font-size:16px;font-weight:300}
+
+/* Catálogo */
+.catalog{padding:120px 0}
+.cat-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:48px}
+.cat-head p{color:var(--muted);margin:16px 0 0;max-width:34em}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--ink);padding:8px 2px;min-width:280px}
+.search svg{width:18px;height:18px;color:var(--muted)}
+.search input{border:0;background:transparent;font:inherit;font-size:16px;outline:none;width:100%;color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px}
+.card{display:flex;flex-direction:column}
+.card .ph{position:relative;aspect-ratio:1;background:var(--surface);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .ph .noimg{font-family:var(--f-display);font-size:64px;color:var(--teal-soft)}
+.card .nuevo{position:absolute;left:12px;top:12px;background:var(--teal);color:var(--night);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:4px 10px;font-weight:600}
+.card .fav{position:absolute;right:10px;top:10px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);display:grid;place-items:center;color:var(--ink)}
+.card .fav svg{width:18px;height:18px}
+.card .fav[aria-pressed="true"]{background:var(--ink);color:var(--teal)}
+.card .orig{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:16px 0 4px}
+.card h3{font-family:var(--f-body);font-size:17px;font-weight:500;line-height:1.35;letter-spacing:0;margin:0 0 6px}
+.card .precio{font-family:var(--f-display);font-style:italic;color:var(--teal-deep);font-size:17px;margin-bottom:14px}
+.card .cot{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--ink);background:transparent;border-radius:999px;padding:11px 14px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;text-decoration:none;color:var(--ink);transition:background .2s,color .2s}
+.card .cot:hover{background:var(--ink);color:#fff}
+.card .cot svg{width:16px;height:16px}
+.skel .ph{background:linear-gradient(90deg,#efece6 25%,#f7f5f1 50%,#efece6 75%);background-size:200% 100%;animation:sh 1.4s infinite}
+.skel .l{height:14px;background:#efece6;margin-top:14px;width:70%}
+@keyframes sh{to{background-position:-200% 0}}
+.state{grid-column:1/-1;text-align:center;padding:64px 24px;border:1px dashed var(--line);background:var(--surface)}
+.state h3{font-size:30px;margin-bottom:10px}
+.state p{color:var(--muted);margin:0 auto 24px;max-width:32em}
+.more{text-align:center;margin-top:48px}
+
+/* Encargo */
+.encargo{padding:0 0 120px}
+.encargo-box{background:var(--teal-soft);display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:72px;align-items:center}
+.encargo-box p{color:#33504c;font-size:18px;font-weight:300;margin:20px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chips a{border:1px solid var(--teal-deep);color:var(--teal-deep);text-decoration:none;border-radius:999px;padding:8px 16px;font-size:14px;transition:background .2s,color .2s}
+.chips a:hover{background:var(--teal-deep);color:#fff}
+form.f{display:grid;gap:14px}
+.f label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:grid;gap:6px}
+.f input,.f textarea{font:inherit;font-size:16px;padding:13px 14px;border:1px solid #c9dcd8;background:#fff;border-radius:var(--radius);color:var(--ink);text-transform:none;letter-spacing:0;resize:vertical}
+
+/* Garantías */
+.trust{border-top:1px solid var(--line);padding:72px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.trust-item svg{width:30px;height:30px;color:var(--teal-deep);margin-bottom:14px}
+.trust-item b{display:block;font-weight:500;margin-bottom:4px}
+.trust-item span{color:var(--muted);font-size:15px}
+
+/* Footer */
+footer{background:var(--night);color:rgba(255,255,255,.75);padding:72px 0 36px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px}
+.foot-logo{background:#fff;display:inline-block;padding:10px 18px;border-radius:var(--radius)}
+.foot-logo img{height:48px;width:auto}
+footer h4{color:#fff;font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;margin:0 0 16px}
+footer a{text-decoration:none;display:block;margin-bottom:8px}
+footer a:hover{color:var(--teal)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:56px;padding-top:24px;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* WhatsApp flotante */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:25;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.2);transition:transform .2s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float svg{width:30px;height:30px}
+
+/* Lista de cotización */
+.drawer-bg{position:fixed;inset:0;background:rgba(15,29,27,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .25s}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--paper);z-index:41;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column}
+body.open .drawer-bg{opacity:1;pointer-events:auto}
+body.open .drawer{transform:none}
+.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:24px 28px;border-bottom:1px solid var(--line)}
+.drawer-h h3{font-size:28px}
+.x{border:0;background:transparent;width:40px;height:40px;display:grid;place-items:center;color:var(--ink)}
+.x svg{width:22px;height:22px}
+.drawer-b{flex:1;overflow:auto;padding:20px 28px}
+.li{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.li .t{width:64px;height:64px;object-fit:cover;background:var(--surface);border:1px solid var(--line)}
+.li b{font-weight:500;font-size:15px;line-height:1.3;display:block}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;margin-top:6px}
+.qty button{border:0;background:transparent;width:30px;height:28px}
+.qty span{min-width:22px;text-align:center;font-size:14px}
+.rm{border:0;background:transparent;color:var(--muted);font-size:13px;text-decoration:underline}
+.drawer-f{padding:20px 28px 28px;border-top:1px solid var(--line);background:var(--surface)}
+.drawer-f .f{margin-bottom:16px}
+.drawer-f .btn{width:100%}
+.empty-list{text-align:center;color:var(--muted);padding:48px 0}
+.empty-list b{display:block;font-family:var(--f-display);font-weight:400;color:var(--ink);font-size:24px;margin-bottom:8px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:999px;font-size:14px;z-index:50;opacity:0;transition:.25s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* Responsive */
+@media (max-width:1000px){
+  .nav ul{display:none}
+  .hero-grid,.story-grid,.encargo-box{grid-template-columns:1fr}
+  .hero-grid{gap:48px}
+  .frame{max-width:520px}
+  .story-photo{position:relative;top:0;max-width:520px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .how-grid,.trust-grid{grid-template-columns:repeat(2,1fr)}
+  .daily-grid{grid-template-columns:1fr}
+  .daily-item{border-left:0;border-top:1px solid var(--line);padding:40px 0}
+  .daily-item:first-child{border-top:0}
+  .encargo-box{padding:48px 32px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .nav{height:68px}
+  .logo img{height:42px}
+  .lista-btn .txt{display:none}
+  .hero{padding:44px 0 72px}
+  .hero p.lead{font-size:18px}
+  .frame{padding:0 0 24px 24px}
+  .tag-card{right:8px;top:auto;bottom:48px}
+  .story,.catalog{padding:80px 0}
+  .story-photo img{margin:56px 0 0 32px;width:calc(100% - 32px)}
+  .grid{gap:28px 14px}
+  .card h3{font-size:15px}
+  .card .cot{font-size:11px;letter-spacing:.1em;padding:10px 8px}
+  .how{padding:80px 0}
+  .how-grid,.trust-grid,.foot-grid{grid-template-columns:1fr}
+  .search{min-width:0;width:100%}
+  .encargo-box{padding:36px 20px}
+  .tag-card{max-width:180px}
+  .hero h1{font-size:44px}
+  .hero-ctas .btn{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Cada día una tienda nueva</span><span>Un descuento único</span><span>Las mejores marcas a los mejores precios</span><span>100% originales</span><span>De USA a Colombia</span>
+    <span>Cada día una tienda nueva</span><span>Un descuento único</span><span>Las mejores marcas a los mejores precios</span><span>100% originales</span><span>De USA a Colombia</span>
+  </div>
+</div>
+
+<header>
+  <nav class="wrap nav" aria-label="Principal">
+    <a class="logo" href="#inicio" aria-label="Arya Personal Shopper, inicio"><img src="img/logo-arya.png" alt="Arya Personal Shopper"></a>
+    <ul>
+      <li><a href="#historia">Mi historia</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#encargo">Encargos</a></li>
+    </ul>
+    <button class="lista-btn" type="button" data-open-list aria-label="Abrir mi lista de cotización">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <span class="txt">Mi lista</span><span class="badge" id="count">0</span>
+    </button>
+  </nav>
+</header>
+
+<main id="inicio">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Personal shopper · USA → Colombia</p>
+      <h1>Lo que amas de USA, <em>original</em> y hasta tu puerta.</h1>
+      <p class="lead">Soy Melissa, paisa de corazón y vivo en Estados Unidos. Busco, compro y te envío a Colombia productos 100% originales de las mejores marcas, al mejor precio.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="#catalogo">Ver catálogo</a>
+        <a class="btn ghost" data-wa="Hola Melissa, quiero pedir una cotización con Arya." href="#">Pedir cotización</a>
+      </div>
+      <div class="hero-proof">
+        <div><b>100%</b><span>Originales</span></div>
+        <div><b>Cada día</b><span>Una tienda nueva</span></div>
+        <div><b>USA → COL</b><span>Envío seguro</span></div>
+      </div>
+    </div>
+    <div class="frame">
+      <img src="img/melissa.jpg" alt="Melissa Lopera, fundadora de Arya Personal Shopper" width="900" height="1600">
+      <div class="tag-card"><small>Fundadora</small><b>Melissa Lopera</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="daily" aria-label="Lo que te ofrece Arya cada día">
+  <div class="wrap daily-grid">
+    <div class="daily-item"><span class="num">01.</span><h3>Cada día una tienda nueva</h3><p>Recorro outlets, malls y tiendas de marca para traerte lo que no se consigue en Colombia.</p></div>
+    <div class="daily-item"><span class="num">02.</span><h3>Un descuento único</h3><p>Cazo las ofertas del día y te las paso a ti. Lo que encuentro en promo, tú lo aprovechas.</p></div>
+    <div class="daily-item"><span class="num">03.</span><h3>Las mejores marcas a los mejores precios</h3><p>Perfumes, maquillaje, tenis, ropa y bolsos. Originales, con factura de tienda.</p></div>
+  </div>
+</section>
+
+<section class="story" id="historia">
+  <div class="wrap story-grid">
+    <div class="story-photo">
+      <div class="label">Mi historia</div>
+      <img src="img/melissa.jpg" alt="Melissa Lopera sonriendo" loading="lazy" width="900" height="1600">
+    </div>
+    <div>
+      <p class="eyebrow">Hecho con amor, desde Medellín</p>
+      <h2>¿Te imaginas cambiar tu vida <em>por amor?</em> Yo lo hice.</h2>
+      <div class="story-text">
+        <p>Me llamo Melissa Lopera y nací en Medellín, entre montañas, tinto a las seis de la mañana y una mamá que me enseñó que las cosas buenas se hacen con cariño. Tenía mi trabajo, mis amigas de toda la vida, mi barrio y mis domingos en familia. Tenía la vida armadita.</p>
+        <p>Y un día el amor me cambió el mapa. Él vivía en Estados Unidos y yo tuve que decidir. ¿Te imaginas meter tu vida entera en dos maletas? Pues yo lo hice. Lo dejé todoooo: mi casa, mi trabajo, los abrazos de mi mamá y hasta la arepa de la mañana.</p>
+        <p>Los primeros meses no fueron fáciles. Extrañaba mi gente, mi idioma, mi ciudad. Hasta que empezaron a llegar los mensajes: <i>"Meli, ¿me traes un perfume original?"</i>, <i>"¿Me consigues esos tenis que allá están a mitad de precio?"</i>. Cada encargo era una excusa para sentirme cerca de casa.</p>
+        <p>Empecé recorriendo tiendas los fines de semana, comparando precios y empacando cada pedido como si fuera para mi hermana. Mis amigas les contaron a sus amigas, y ellas a las suyas. Así nació <b>Arya</b>: un puente entre las dos tierras que amo.</p>
+        <p>Hoy cada día visito una tienda nueva, cazo descuentos únicos y te traigo las mejores marcas, originales y al mejor precio. Porque sé lo que se siente esperar algo especial desde lejos, y quiero que cuando abras tu paquete sientas lo mismo que yo siento cuando llego a Medellín: que valió la pena.</p>
+      </div>
+      <blockquote>"Me fui por amor. Y por amor sigo conectada con mi gente, un pedido a la vez."</blockquote>
+      <p class="firma"><b>Melissa Lopera</b> · Fundadora de Arya</p>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="como-funciona">
+  <div class="wrap">
+    <p class="eyebrow">Cómo funciona</p>
+    <h2>Tu compra en USA, <em>sin complicaciones.</em></h2>
+    <div class="how-grid">
+      <div class="step"><div class="n">1</div><h3>Elige</h3><p>Mira el catálogo o cuéntame qué producto estás buscando.</p></div>
+      <div class="step"><div class="n">2</div><h3>Pide tu cotización</h3><p>Me escribes por WhatsApp y te envío el precio final, con envío incluido.</p></div>
+      <div class="step"><div class="n">3</div><h3>Lo compro por ti</h3><p>Con tu confirmación compro en tiendas oficiales de Estados Unidos.</p></div>
+      <div class="step"><div class="n">4</div><h3>Te llega a Colombia</h3><p>Lo empaco con cuidado y te lo envío hasta tu ciudad.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="cat-head">
+      <div>
+        <p class="eyebrow">Catálogo Arya</p>
+        <h2>Recién llegado <em>de USA</em></h2>
+        <p>Agrega a tu lista lo que te guste y pide una sola cotización por WhatsApp. Los precios cambian con las ofertas del día, por eso te cotizo al momento.</p>
+      </div>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Buscar producto…" aria-label="Buscar producto">
+      </label>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <div class="more" id="more" hidden><button class="btn ghost" type="button" id="more-btn">Ver más productos</button></div>
+  </div>
+</section>
+
+<section class="encargo" id="encargo">
+  <div class="wrap">
+    <div class="encargo-box">
+      <div>
+        <p class="eyebrow">Encargos personalizados</p>
+        <h2>¿No ves lo que <em>buscas?</em></h2>
+        <p>Mándame el nombre, la foto o el enlace del producto y yo lo busco por ti en las tiendas de Estados Unidos.</p>
+        <div class="chips">
+          <a href="#" data-wa="Hola Melissa, estoy buscando un perfume original. ¿Me ayudas con una cotización?">Perfumes</a>
+          <a href="#" data-wa="Hola Melissa, estoy buscando maquillaje original. ¿Me ayudas con una cotización?">Maquillaje</a>
+          <a href="#" data-wa="Hola Melissa, estoy buscando tenis originales. ¿Me ayudas con una cotización?">Tenis</a>
+          <a href="#" data-wa="Hola Melissa, estoy buscando ropa. ¿Me ayudas con una cotización?">Ropa</a>
+          <a href="#" data-wa="Hola Melissa, estoy buscando un bolso original. ¿Me ayudas con una cotización?">Bolsos</a>
+          <a href="#" data-wa="Hola Melissa, estoy buscando vitaminas y suplementos. ¿Me ayudas con una cotización?">Vitaminas</a>
+          <a href="#" data-wa="Hola Melissa, estoy buscando tecnología. ¿Me ayudas con una cotización?">Tecnología</a>
+        </div>
+      </div>
+      <form class="f" id="f-encargo">
+        <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
+        <label>Ciudad en Colombia<input name="ciudad" required autocomplete="address-level2"></label>
+        <label>¿Qué estás buscando?<textarea name="detalle" rows="4" required placeholder="Marca, referencia, talla, color o el enlace del producto"></textarea></label>
+        <button class="btn" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Enviar por WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Garantías">
+  <div class="wrap trust-grid">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><b>100% originales</b><span>Comprados en tiendas oficiales, con factura.</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12V8l-8-5-8 5v8l8 5 3-1.9"/><path d="m4 8 8 5 8-5M12 13v8"/><path d="M17 17h5m-2-2 2 2-2 2"/></svg><b>Envío a toda Colombia</b><span>De Estados Unidos hasta tu ciudad.</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h18M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M7 15h4"/></svg><b>Pagos con abonos</b><span>Te explico las formas de pago al cotizar.</span></div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><b>Atención personal</b><span>Hablas directo conmigo, de principio a fin.</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="foot-logo"><img src="img/logo-arya.png" alt="Arya Personal Shopper" loading="lazy"></span>
+        <p style="margin-top:20px;max-width:24em">Compras originales en Estados Unidos con entrega en Colombia. Cada día una tienda nueva, un descuento único, las mejores marcas a los mejores precios.</p>
+      </div>
+      <div>
+        <h4>Arya</h4>
+        <a href="#historia">Mi historia</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#encargo">Encargos</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="#" data-wa="Hola Melissa, quiero información sobre Arya.">WhatsApp: +57 310 746 0713</a>
+        <a href="#encargo">Haz tu encargo</a>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="yr"></span> Arya Personal Shopper · Melissa Lopera</span><span>Hecho con amor entre Medellín y USA</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" data-wa="Hola Melissa, vi tu página de Arya y quiero pedir una cotización." aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+</a>
+
+<div class="drawer-bg" data-close-list></div>
+<aside class="drawer" aria-label="Mi lista de cotización" aria-hidden="true">
+  <div class="drawer-h">
+    <h3>Mi lista</h3>
+    <button class="x" type="button" data-close-list aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="drawer-b" id="list"></div>
+  <div class="drawer-f" id="list-f">
+    <form class="f" id="f-lista">
+      <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
+      <label>Ciudad en Colombia<input name="ciudad" required autocomplete="address-level2"></label>
+      <button class="btn teal" type="submit">Pedir cotización por WhatsApp</button>
+    </form>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+// ---------- Conexión con la app Arya (mismo proyecto de Supabase) ----------
+const SUPABASE_URL = 'https://bsukpdnbvkhwwgdwwdty.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzdWtwZG5idmtod3dnZHd3ZHR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTExNDg0NzgsImV4cCI6MjEwNjcyNDQ3OH0.T-jYkxNCvlYxLWs-SX1yga0tjK_GtiUaQ-836aZFw40';
+const BUCKET = 'archivos';
+const WHATSAPP = '573107460713';
+const POR_PAGINA = 12;
+const REFRESCO_MS = 60 * 1000;
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const waUrl = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+const abrirWa = msg => window.open(waUrl(msg), '_blank', 'noopener');
+const ICON_BOLSA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>';
+const ICON_WA = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>';
+
+let sb = null, productos = [], urls = {}, visibles = POR_PAGINA, estado = 'cargando';
+
+function toast(t) {
+  const el = $('#toast'); el.textContent = t; el.classList.add('on');
+  clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('on'), 2200);
+}
+
+// ---------- Mi lista (se guarda en este navegador) ----------
+let lista = [];
+try { lista = JSON.parse(localStorage.getItem('arya-lista') || '[]'); } catch (e) { lista = []; }
+function guardarLista() {
+  try { localStorage.setItem('arya-lista', JSON.stringify(lista)); } catch (e) {}
+  pintarLista(); pintarGrid();
+}
+const enLista = id => lista.some(i => i.id === id);
+function alternar(id) {
+  const p = productos.find(x => x.id === id); if (!p) return;
+  if (enLista(id)) { lista = lista.filter(i => i.id !== id); toast('Quitado de tu lista'); }
+  else { lista.push({ id, nombre: p.nombre, cant: 1 }); toast('Agregado a tu lista'); }
+  guardarLista();
+}
+function pintarLista() {
+  $('#count').textContent = lista.reduce((s, i) => s + i.cant, 0);
+  $('#list-f').hidden = !lista.length;
+  $('#list').innerHTML = lista.length ? lista.map(i => {
+    const p = productos.find(x => x.id === i.id), u = p && urls[p.id];
+    return `<div class="li">
+      ${u ? `<img class="t" src="${esc(u)}" alt="">` : '<div class="t"></div>'}
+      <div><b>${esc(i.nombre)}</b>
+        <span class="qty"><button type="button" data-q="-1" data-id="${esc(i.id)}" aria-label="Menos">−</button><span>${i.cant}</span><button type="button" data-q="1" data-id="${esc(i.id)}" aria-label="Más">+</button></span></div>
+      <button class="rm" type="button" data-rm="${esc(i.id)}">Quitar</button>
+    </div>`;
+  }).join('') : `<div class="empty-list"><b>Tu lista está vacía</b>Toca la bolsa en los productos que te gusten y pide una sola cotización.</div>`;
+}
+function abrirLista(on) {
+  document.body.classList.toggle('open', on);
+  $('.drawer').setAttribute('aria-hidden', String(!on));
+}
+
+// ---------- Catálogo ----------
+function filtrados() {
+  const q = $('#q').value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  if (!q) return productos;
+  return productos.filter(p => p.nombre.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').includes(q));
+}
+function pintarGrid() {
+  const g = $('#grid');
+  if (estado === 'cargando') {
+    g.innerHTML = Array.from({ length: 8 }, () => '<div class="card skel"><div class="ph"></div><div class="l"></div><div class="l" style="width:45%"></div></div>').join('');
+    $('#more').hidden = true; return;
+  }
+  if (estado === 'error') {
+    g.innerHTML = `<div class="state"><h3>El catálogo se está actualizando</h3><p>Mientras tanto, escríbeme y te cuento qué tengo disponible hoy.</p><a class="btn" href="${waUrl('Hola Melissa, quiero ver qué productos tienes disponibles.')}" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>`;
+    $('#more').hidden = true; return;
+  }
+  const lista_ = filtrados();
+  if (!lista_.length) {
+    g.innerHTML = productos.length
+      ? `<div class="state"><h3>No encontré ese producto</h3><p>Pero seguro te lo consigo en USA. Pídemelo como encargo.</p><a class="btn" href="#encargo">Hacer un encargo</a></div>`
+      : `<div class="state"><h3>Pronto nuevos productos</h3><p>Estoy recorriendo tiendas. Escríbeme y te cuento las ofertas de hoy.</p><a class="btn" href="${waUrl('Hola Melissa, ¿qué ofertas tienes hoy?')}" target="_blank" rel="noopener">Ver ofertas de hoy</a></div>`;
+    $('#more').hidden = true; return;
+  }
+  const semana = Date.now() - 7 * 864e5;
+  g.innerHTML = lista_.slice(0, visibles).map(p => {
+    const u = urls[p.id], on = enLista(p.id);
+    return `<article class="card">
+      <div class="ph">
+        ${u ? `<img src="${esc(u)}" alt="${esc(p.nombre)}" loading="lazy">` : `<span class="noimg">A</span>`}
+        ${p.creado > semana ? '<span class="nuevo">Nuevo</span>' : ''}
+        <button class="fav" type="button" data-fav="${esc(p.id)}" aria-pressed="${on}" aria-label="${on ? 'Quitar de' : 'Agregar a'} mi lista">${ICON_BOLSA}</button>
+      </div>
+      <p class="orig">Original · USA</p>
+      <h3>${esc(p.nombre)}</h3>
+      <div class="precio">Precio bajo cotización</div>
+      <a class="cot" href="${waUrl(`Hola Melissa, quiero pedir cotización de: ${p.nombre}`)}" target="_blank" rel="noopener">${ICON_WA}Pedir cotización</a>
+    </article>`;
+  }).join('');
+  $('#more').hidden = lista_.length <= visibles;
+}
+
+async function firmarFotos(lista_) {
+  const nuevas = {};
+  const rutas = [];
+  lista_.forEach(p => {
+    if (!p.foto) return;
+    if (/^(data:|https?:)/.test(p.foto)) nuevas[p.id] = p.foto;
+    else rutas.push(p);
+  });
+  for (let i = 0; i < rutas.length; i += 100) {
+    const lote = rutas.slice(i, i + 100);
+    const { data } = await sb.storage.from(BUCKET).createSignedUrls(lote.map(p => p.foto), 60 * 60 * 24);
+    (data || []).forEach((r, k) => { if (r && r.signedUrl) nuevas[lote[k].id] = r.signedUrl; });
+  }
+  return nuevas;
+}
+
+async function cargar() {
+  if (!sb) return;
+  try {
+    const { data, error } = await sb.rpc('catalogo_web');
+    if (error) throw error;
+    const fotosAntes = JSON.stringify(productos.map(p => [p.id, p.foto]));
+    productos = (data || []).filter(p => p && p.nombre);
+    if (JSON.stringify(productos.map(p => [p.id, p.foto])) !== fotosAntes || !Object.keys(urls).length) {
+      urls = await firmarFotos(productos);
+    }
+    estado = 'listo';
+  } catch (e) {
+    console.error('Catálogo Arya:', e);
+    if (!productos.length) estado = 'error';
+  }
+  pintarGrid(); pintarLista();
+}
+
+// ---------- Eventos ----------
+document.addEventListener('click', e => {
+  const wa = e.target.closest('[data-wa]');
+  if (wa) { e.preventDefault(); abrirWa(wa.dataset.wa); return; }
+  const fav = e.target.closest('[data-fav]');
+  if (fav) { alternar(fav.dataset.fav); return; }
+  if (e.target.closest('[data-open-list]')) { abrirLista(true); return; }
+  if (e.target.closest('[data-close-list]')) { abrirLista(false); return; }
+  const q = e.target.closest('[data-q]');
+  if (q) {
+    const it = lista.find(i => i.id === q.dataset.id);
+    if (it) { it.cant = Math.max(1, it.cant + +q.dataset.q); guardarLista(); }
+    return;
+  }
+  const rm = e.target.closest('[data-rm]');
+  if (rm) { lista = lista.filter(i => i.id !== rm.dataset.rm); guardarLista(); }
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') abrirLista(false); });
+$('#q').addEventListener('input', () => { visibles = POR_PAGINA; pintarGrid(); });
+$('#more-btn').addEventListener('click', () => { visibles += POR_PAGINA; pintarGrid(); });
+
+$('#f-lista').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const items = lista.map((i, n) => `${n + 1}. ${i.nombre} (x${i.cant})`).join('\n');
+  abrirWa(`Hola Melissa, soy ${f.get('nombre')} de ${f.get('ciudad')}. Quiero cotizar estos productos de Arya:\n\n${items}\n\n¡Gracias!`);
+});
+$('#f-encargo').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  abrirWa(`Hola Melissa, soy ${f.get('nombre')} de ${f.get('ciudad')}. Quiero hacer un encargo:\n\n${f.get('detalle')}`);
+});
+
+$('#yr').textContent = new Date().getFullYear();
+pintarGrid(); pintarLista();
+
+if (window.supabase) {
+  sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { persistSession: false } });
+  cargar();
+  setInterval(cargar, REFRESCO_MS);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) cargar(); });
+} else {
+  estado = 'error'; pintarGrid();
+}
+</script>
+</body>
+</html>

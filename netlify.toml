@@ -1,0 +1,3 @@
+# Netlify publica esta carpeta tal cual (no hay paso de compilación).
+[build]
+  publish = "."
